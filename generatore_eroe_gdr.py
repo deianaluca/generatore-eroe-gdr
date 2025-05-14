@@ -37,16 +37,14 @@ def scegli_arma(classe):
 nome = input("🧙‍♂️ Benvenuto, viandante. Dimmi il tuo nome: ")
 
 # Scelta razza tra opzioni numerate
-print("
-Scegli la tua razza:")
+print("Scegli la tua razza:")
 for i, razza in enumerate(razze, 1):
     print(f"{i}. {razza}")
 scelta_razza = int(input("Digita il numero della razza scelta: "))
 razza = razze[scelta_razza - 1]
 
 # Scelta classe tra opzioni numerate
-print("
-Scegli la tua classe:")
+print("Scegli la tua classe:")
 for i, classe in enumerate(classi, 1):
     print(f"{i}. {classe}")
 scelta_classe = int(input("Digita il numero della classe scelta: "))
