@@ -37,14 +37,14 @@ def scegli_arma(classe):
 nome = input("🧙‍♂️ Benvenuto, viandante. Dimmi il tuo nome: ")
 
 # Scelta razza tra opzioni numerate
-print("Scegli la tua razza:")
+print("\nScegli la tua razza:")
 for i, razza in enumerate(razze, 1):
     print(f"{i}. {razza}")
 scelta_razza = int(input("Digita il numero della razza scelta: "))
 razza = razze[scelta_razza - 1]
 
 # Scelta classe tra opzioni numerate
-print("Scegli la tua classe:")
+print("\nScegli la tua classe:")
 for i, classe in enumerate(classi, 1):
     print(f"{i}. {classe}")
 scelta_classe = int(input("Digita il numero della classe scelta: "))
@@ -55,15 +55,13 @@ arma = scegli_arma(classe)
 equipaggiamento = [arma] + equip_base.copy()
 
 # Presentazione del personaggio creato
-print(f"
-⚔️ Benvenuto {nome}, {classe} {razza}!")
+print(f"\n⚔️ Benvenuto {nome}, {classe} {razza}!")
 print("Hai ricevuto il seguente equipaggiamento iniziale:")
 for item in equipaggiamento:
     print(f"- {item}")
 
 # Ciclo per aggiunta oggetti manuale all'inventario
-print("
-Puoi ora aggiungere altri oggetti al tuo inventario. Scrivi 'fine' per terminare.")
+print("\nPuoi ora aggiungere altri oggetti al tuo inventario. Scrivi 'fine' per terminare.")
 while True:
     nuovo_oggetto = input("> Aggiungi oggetto: ")
     if nuovo_oggetto.lower() == "fine":
@@ -71,11 +69,9 @@ while True:
     equipaggiamento.append(nuovo_oggetto)
 
 # Riepilogo finale dell'inventario
-print("
-📜 Inventario finale del tuo eroe:")
+print("\n📜 Inventario finale del tuo eroe:")
 for item in equipaggiamento:
     print(f"- {item}")
 
 # Saluto finale con nome e classe
-print(f"
-Che gli dei proteggano il tuo cammino, {nome} il {classe}!")
+print(f"\nChe gli dei proteggano il tuo cammino, {nome} il {classe}!")
